@@ -17,12 +17,12 @@ namespace BettinCoTestTask
 
             while (true)
             {
-                var response = await GetHtmlCodeAsync("https://www.gismeteo.ru/weather-miami-7063/10-days/");
+                var response = await GetHtmlCodeAsync("https://www.gismeteo.ru/weather-homestead-28913/10-days/");
                 newData = new GisMeteo10Days(response);
                 if (newData != prevData)
                 {
                     //add to db;
-                    Console.WriteLine("!=");
+                    Console.WriteLine(newData);
                 }
                 else
                 {

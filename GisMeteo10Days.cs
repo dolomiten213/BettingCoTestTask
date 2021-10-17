@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace BettinCoTestTask
 {
+    /// <summary>
+    /// Класс для парсинга прогноза погоды на 10 дней с сайта Gismeteo.ru
+    /// </summary>
     class GisMeteo10Days
     {
-
         List<WeatherDay> Days { get; init; }
         private readonly string htmlCode = String.Empty; 
-        
+        /// <summary>
+        /// Парсинг происходит сразу в конструкторе
+        /// </summary>
+        /// <param name="htmlCode">
+        /// html код страницы сайта Gismeteo
+        /// </param>
         public GisMeteo10Days(string htmlCode)
         {
             this.htmlCode = htmlCode;
